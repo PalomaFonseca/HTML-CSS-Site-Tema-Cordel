@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+/*font-family: 'Passion One', cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Passion+One:wght@700&display=swap');
+/*font-family: 'Dancing Script', cursive;*/
+
+:root {
+    --colorw:white;
+    --colorb:black;
+    --colorg:#4878C4;/*generico*/
+    --colorgg:#73AFD4;
+
+    --standart_font:Verdana, Geneva, Tahoma, sans-serif;
+    --h1_font:'Passion One', cursive, sans-serif;
+    --paragraph_font:'Dancing Script', cursive, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--colorg);
+}
+
+header {
+    background-image: linear-gradient(to top, var(--colorg), var(--colorgg));
+    /*background-color: var(--colorg);*/
+    color: var(--colorw);
+    text-align: center;
+    text-shadow: 2px 2px 1px #0000008f;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--h1_font);
+    font-size: 10vw;/*normalmente celular aumenta a largura, por isso utilizamos uma largura relativa*/
+}
+
+header > p {
+    padding-bottom: 50px;
+    font-family: var(--standart_font);
+    font-size: 1.5em;/*Do jeito relativo estava ficando ruim*/
+}
+
+a {
+    color: var(--colorw);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main > section {
+    padding-top: 10vh;/*Revisar*/
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 1.5em;/*Facilita a leitura*/
+    font-family: var(--paragraph_font);
+    font-size: 5vw;
+}
+
+main  > section.normal {
+    background-color: var(--colorw);
+    color: var(--colorb);
+    box-shadow: inset 1px 1px 8px 0px #00000041;
+    text-shadow: 0.5px 0.5px 0.5px #00000041;
+}
+
+main  > section.image {
+    background-color: var(--colorw);
+    color: var(--colorw);
+    text-shadow: 1.5px 1px #00000080;
+    box-shadow: inset 1px 1px 8px 0px #00000041;
+    background-size: cover;
+    /*Parallax*/
+    background-attachment: fixed;
+}
+
+main > section#imgflor {
+    background-image: url(../images/background001.jpg);
+    background-position: right center;
+}
+
+main > section#imgcarta {
+    background-image: url(../images/background004.jpg);
+    background-position: right center;
+}
+
+main > section p.pnormal {
+    background-color: var(--colorw);
+}
+
+main > section p.pimage {
+    display: inline-block;/*caixa se adapta ao conteúdo*/
+    background-color: #00000075;
+    border-radius: 5px 5px;
+    padding: 15px;
+}
+
+footer {
+    background-image: linear-gradient(to bottom, var(--colorg), var(--colorgg));
+    color: var(--colorw);
+    text-align: center;
+    padding: 10px;
+    font-family: var(--standart_font);
+    font-size: 1em;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.562);
+}
